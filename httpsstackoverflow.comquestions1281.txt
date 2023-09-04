@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/12811762/dev-c-in-windows-8-gcc-internal-error

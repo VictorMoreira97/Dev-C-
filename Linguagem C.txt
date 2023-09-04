@@ -1,0 +1,339 @@
+C
+
+--------------------------------------------------------------
+
+#include <stdio.h>
+DEVE ESTAR INCLUÍDO EM TODO CÓDIGO
+--------------------------------------------------------------
+
+int main (){
+
+}
+
+TUDO ORGANIZADO EM ESTRUTURA DE FUNÇÕES
+
+--------------------------------------------------------------
+INPUT and OUTPUT (entrada e saída de dados)
+
+-SINTAXE:
+
+printf(<text>, <v1>, <v2>, ..., <vN>);
+
+-USO:
+
+0, 1, ou N variáveis
+
+d / i   -- NÚMEROS BASE 10
+X       -- NÚMEROS INT BASE 16
+f       -- NÚMEROS FLOAT
+e       -- NÚMEROS NOTAÇÃO CIENTÍFICA (CASAS DECIMAIS)
+c       -- ALFANUMÉRICOS (texto)
+s       -- SEQUÊNCIA DE ALFANUMÉRICOS (texto)
+.<num>  -- DÍGITOS INPRESSOS APÓS A VÍRGULA
+
+\a      -- toca um bipe
+\b      -- Backspace
+\n      -- quebra de linha
+\t      -- Tabulação horizontal (TAB)
+\r      -- Caractere nulo
+\v      -- Tabulação vertical
+
+\\      -- Caractere \
+\'      -- Caractere '
+\"      -- Caractere "
+\?      -- Caractere ?
+\123    -- Caractere código 123 em octal (ASCII)
+\X12    -- Caractere código 12 em Hexadecimal (ASCII)
+%%      -- Caractere %
+
+EXEMPLO:
+
+int main() {
+	printf("Oi, tudo bem?\n");
+	printf("Valor inteiro: %d. \n", 10);
+	printf("Valor real: %f.\n", 3.14159265);
+	printf("Valor real com apenas duas casas: %.2f.\n", 3.14159265);
+	printf("Dado de texto: %c.\n", 'a');
+	printf("Dado de texto: %s.\n", "testando");
+}
+
+Oi, tudo bem?
+Valor inteiro: 10.
+Valor real: 3.141593
+Valor real com apenas duas casa: 3.14
+Dado de texto: a.
+Dado de texto: testando.
+
+----------------------------------------------------------
+
+ENTRADA DE DADOS PELO TECLADO -- scanf
+
+-SINTAXE
+
+scanf(<form.>, &<v1>, ..., &<vn>);
+
+-USO
+1 ou N variáveis
+
+-ESPECIFICADORES
+%d / %i   -- NÚMEROS BASE 10
+%X       -- NÚMEROS INT BASE 16
+%f       -- NÚMEROS FLOAT
+%e       -- NÚMEROS NOTAÇÃO CIENTÍFICA (CASAS DECIMAIS)
+%c       -- ALFANUMÉRICOS (texto)
+%s       -- SEQUÊNCIA DE ALFANUMÉRICOS (texto)
+[^chars]-- lê todos os dados digitados, exceto os especificados em "chars"
+
+-VARIÁVEIS
+
+-SINTAXE:
+	<tipo> <nome>;
+
+-NOMECLATURA
+	Não:
+	-Número na 1ª posição
+	-Caracteres especiais
+	-Espaço
+
+-TIPOS PRIMITIVOS
+
+char         -- 8 bits  -- -127 a 127
+int (short)  -- 16 bits -- -32.768 a 32.767
+int (long)   -- 32 bits --
+float        -- 32 bits --
+double       -- 64 bits -- 
+
+-OPERADOR =
+	--atribuição: tudo que está a direita de "=" será atribuído a variáveç
+
+-SINTAXE
+
+	<variavel> = <informacao>;
+
+-DIRETIVA
+	#define: cria-se um identificador para dado de qualquer tipo
+
+-SINTAXE
+
+	#define <nome> <valor>
+
+-EXEMPLO:
+int main () {
+	printf("%s\n", texto);
+	
+	int idade = 0;
+	float altura = 0;
+	char nome[50] = "";
+	
+	printf("Digite a idade:\n");
+	scanf("%d", &idade);
+	
+	printf("Digite a altura:\n");
+	scanf("%f", &altura);
+	
+	printf("Digite a nome:\n");
+	scanf("%s", &nome);
+
+	printf("Dados informados:\n");
+	printf("Idade: %d.\n", idade);
+	printf("Altura: %.2f.\n", altura);
+	printf("Nome> %s.\n", nome);
+}
+
+----------------------------------------------------------
+
+-ATRIBUIÇÕES ARITMÉTICAS
+-OPERADORES MATEMÁTICOS
+
+-- SOMA:                         +
+-- SUBTRAÇÃO:                    -
+-- MULTIPLICAÇÃO:                *
+-- DIVISÃO:                      /
+-- RESTO DIV INT:                %
+
+-- INCREMENTO DE UNIDADE:        ++
+-- DECREMENTO DE UNIDADE:        --
+-- INCREMENTO GENÉRICO:          +=
+-- DECREMENTO GENÉRICO:          -=
+-- ATRIBUIÇÃO COM MULTIPLICAÇÃO: *=
+-- ATRIBUIÇÃO COM DIVISÃO:       /=
+
+----------------------------------------------------------
+
+-ESTRUTURAS DE DECIÇÃO: if
+
+-SINTAXE:
+	if(<condicao>) {
+		<bloco_de_comandos>
+	}
+
+-OPERADORES RELACIONAIS
+-- maior que:                    >
+-- maior ou igual a:             >=
+-- menor:                        <
+-- menor ou igual a:             <=
+-- igual:                        ==
+-- diferente:                    !=
+
+
+-DISJUNÇÃO ("e")    --  ||  -- True se TUDO for True
+-CONJUNÇÃO ("ou")   --  &&  -- True se AO MENOS 1 for True
+-NEGAÇÃO   ("não")  --  !   -- True se TUDO for False
+
+-ESTRUTURA DE DECIÇÃO: if-else
+
+-SINTAXE:
+
+	if (<condicao>) {
+		<bloco_de_comandos1>
+	} else {
+		<bloco_de_comandos2>
+	}
+
+-DESVIO DE FLUXO: switch-case
+-somente para comparações de ingualdade
+
+-SINTAXE:
+
+	switch(<var>) {
+		case <v1>:
+			<bloco_de_comandos1>
+			break;
+		case <v2>:
+			<bloco_de_comandos2>
+			break;
+		...
+		case <vN>:
+			<bloco_de_comandosN>
+			break;
+		default:
+			<bloco_de_comandos_padrao>
+			break;
+	}
+
+----------------------------------------------------------
+-ESTRUTURAS DE REPETIÇÃO
+
+-WHILE
+-SINTAXE:
+	
+	while(<condicao>) {
+		<bloco_de_comandos>
+	}
+
+
+-DO-WHILE
+-Condição lógica só avalida no final da execução do bloco
+-Obrigatória execução ao menos 1x
+
+-SINTAXE:
+	
+	do {
+		<bloco_de_comandos>
+	} while (<condicao>);
+
+-FOR
+-SINTAXE
+
+	for (<ini.>; <cond.>; <incr.>) {
+		<bloco_de_comandos>
+	}
+
+
+-BREAK -- CONTINUE
+
+----------------------------------------------------------
+
+-ARRAYS / VETORES
+Estrutura de dados UNIDIMENCIONAIS
+
+ÍNDICE único que controla POSIÇÕES
+1ª posição: índice 0
+Nª posição: índice N - 1
+
+-SINTAXE:
+	
+	<tipo> <nome> [<tamanho>];
+Ex.: 
+	int    vetor  [5];
+
+-Acesso a uma posição:
+	Não é possível acessar um vetor toto
+-SINTAXE:
+	
+	<nome> [<índice>]
+
+-Lista de inicialização: preenche um vetor todo, de uma vez só
+
+	<tipo> <nome>[<tam.>] = {<v1>, <v2>, ..., <vN>};
+Ex.:
+	int    vetor  [5]         = {10, 20, 30, 40, 50};
+
+----------------------------------------------------------
+STRINGS - DADOS DE TEXTO
+
+índice:	 0 - 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10
+String:  O   l   á   _   M   u   n   d   o   !   \
+
+MÉTODOS:
+scanf()
+	-Limitações: linguagem rebuscada
+	-Especificador de formato: %s
+	-SINTAXE geral:
+
+		scanf("%s", <str>);
+
+		obs.: NÃO É MAIS PRECISO DO &
+
+	-SINTAXE aprimorada:
+		
+		scanf("%<tam.-1>[^\n]s", <str>);
+
+------------------------
+printf()
+	-Especificador de formato: %s
+	-SINTAXE:
+		
+		printf("<texto>", <str1>, <str2>, ..., <strN>);	
+
+------------------------
+gets()
+	-Limitações: estouro do limite do vetor
+	-SINTAXE:
+
+		gets(<string>);
+
+------------------------
+fgets()
+	-último caracter reservado para '\0'
+	-Entrada padrão: stdin
+	-SINTAXE: 
+
+		fgets(<string>, <tam>, stdin);
+
+	-stdin == entrada (input) de dados padrão (teclado)
+
+------------------------
+puts()
+	-imprime uma string diretamente na tela
+	-Não admite variáveis de outros tipos
+	-SINTAXE:
+		puts(<string>);
+	
+------------------------
+-fflush(stdin)
+	-chamar sempre depois de uma entrada
+	-limpa a entrada de dados para dar espaço a uma nova
+
+------------------------
+Biblioteca <string.h>
+
+-SINTAXES de funções importantes:
+	- strcpy (<destino>, <origem>);
+	- strcat (<destino>, <origem>);
+	// modos de fazer alterações em uma string
+	- strlen (<string>);
+	- strcmp (<string1>, <string2>);
+------------------------
+Biblioteca <locale.h>
+	- setlocale(LC_ALL, "Portuguese");
