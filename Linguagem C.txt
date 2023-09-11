@@ -423,3 +423,30 @@ STRUCTS
 		printf("pes.peso: %.2f\n", pes.peso);
 		printf("pes.nome: %s\n", pes.nome);
 	}
+
+--------------------------------------------------------------
+FUNÇÕES E PROCEDIMENTOS
+
+-SINTAXE:
+
+	<tipo> <nome_da_funcao> (<parametros>) {
+		<bloco de comandos>
+		return <informacao>;
+	}
+
+-SINTAXE para parâmetros struct:
+
+	<tipo> <funcao>(<tipo_struct> <param>) {...}
+
+-SINTAXE para VETORES/MATRIZES como parâmetro:
+
+	
+	<tipo> <funcao> (<tipo> <vet>[], int tam) {...}
+
+	   <tipo> <funcao>(<tipo> <vet>[], int tam) {...}
+		
+				* antes do nome do vetor
+	<tipo> <funcao> (<tipo> *<vet>[<tam>]) {...}
+
+      <tipo> <funcao>(<tipo m[ [<tam2>], int tam1) {...}
+	
