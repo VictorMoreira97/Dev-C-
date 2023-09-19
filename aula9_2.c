@@ -15,7 +15,7 @@ void imprime2 (int v[5]) {
 	}
 }
 
-void imprime3(int *v, int n) {
+void imprime3 (int *v, int n) {
 	int i;
 	for(i=0; i<n; i++){
 		printf("%d ", v[i]);
