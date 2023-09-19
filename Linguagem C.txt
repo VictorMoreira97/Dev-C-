@@ -334,10 +334,13 @@ Biblioteca <string.h>
 
 -SINTAXES de funções importantes:
 	- strcpy (<destino>, <origem>);
+	qqcópia
 	- strcat (<destino>, <origem>);
 	// modos de fazer alterações em uma string
-	- strlen (<string>);
+	- strlen (<string>);          
+	//tamnaho
 	- strcmp (<string1>, <string2>);
+	//comparação
 ------------------------
 Biblioteca <locale.h>
 	- setlocale(LC_ALL, "Portuguese");
