@@ -19,6 +19,8 @@ int main (int argc, char *argv[]) {
 		printf("\n%d", vetor[cont]);
 	}
 	
+	free(vetor);
+	
 	return 0;
 }
 
