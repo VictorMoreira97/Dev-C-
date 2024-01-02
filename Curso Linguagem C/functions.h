@@ -1,3 +1,3 @@
 void imprimeOi() {
-	printf("Oi");
+	printf("Oi\n");
 }
